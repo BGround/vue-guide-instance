@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<! -- 
+ *  计算属性缓存 vs 方法
+ *	计算属性 vs 侦听属性
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="App">
+			<p>Ori message: {{message}}</p>
+			<p>reversed message: {{reversedMessage}}</p>
+			<p>Date: {{time}}</p>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#App',
+				data:{
+					message: 'hello'
+				},
+				computed:{
+					reversedMessage: function() {
+						return this.message.split('').reverse('').join('')
+					},
+					time: function() {
+						return Date.now()
+					}
+				}
+			})
+			vm.message = 'Good Vue'
+			console.log(vm.reversedMessage)
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<! -- 
+ *	计算属性 vs setter & getter
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="App">
+			<p>{{fullName}}</p>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#App',
+				data:{
+					firstName: 'John',
+					lastName: 'Bom'
+				},
+				computed:{
+					fullName: {
+						get: function() {
+							return this.firstName + ' ' + this.lastName
+						},
+						set: function(newValue) {
+							var names = newValue.split(' ')
+							this.firstName = names[0]
+							this.lastName = names[names.length-1]
+						}
+					}
+				}
+			})
+			vm.fullName = 'Lili Kobe'
+			console.log(vm.firstName + vm.lastName)
+		</script>
+		
+	</body>
+</html>
