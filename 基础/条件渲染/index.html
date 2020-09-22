@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- v-if & v-show 的区别
+ v-if是显示才会渲染到DOM中，
+ v-show是一直在DOM中就渲染的，只是在CSS切换
+ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="App">
+			<div v-if="type === 'A'">a</div>
+			<div v-else-if="type === 'B'">b</div>
+			<div v-else-if="type === 'C'">c</div>
+			<div v-else>Not a/b/c</div>
+			
+			<h1 v-show="show">hi vue</h1>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#App',
+				data:{
+					type: 'B',
+					show: 'yes'
+				}
+			})
+		</script>
+	</body>
+</html>
