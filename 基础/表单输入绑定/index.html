@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="App">
+			<input v-model="message" placeholder="edit it">
+			<p>message is : {{message}}</p>
+			
+			<textarea v-model="multipleMessage" placeholder="add multiple lines"></textarea>
+			<p style="white-space: pre-line;">multiple message is :<br> {{multipleMessage}}</p>
+			
+			<input type="checkbox" id="jack" value="Jack" v-model="checkNames">
+			<label for="jack">Jack</label>
+			<input type="checkbox" id="boo" value="Boo" v-model="checkNames">
+			<label for="boo">Boo</label>
+			<input type="checkbox" id="cam" value="Cam" v-model="checkNames">
+			<label for="cam">Cam</label>
+			<br />
+			<span>Checked names: {{checkNames}}</span>
+			
+			<div id="Radio" style="margin-top: 20px;">
+				<input type="radio" id='one' value="One" v-model="pick">
+				<label for="one">One</label>
+				<input type="radio" id='two' value="Two" v-model="pick">
+				<label for="two">Two</label>
+				<input type="radio" id='three' value="Three" v-model="pick">
+				<label for="three">Three</label>
+				<br />
+				<span>picks: {{pick}}</span>
+			</div>
+			
+<!-- 			<div id = "toggle" style="margin-top: 20px;">
+				<input type="checkbox" v-model="toggle" true-value="yes" false-value="no" />
+				<span>toggle: {{toggle}}</span>
+			</div> -->
+			
+			<div id="select" style="margin-top: 20px" multiple style="width: 50px">
+				<select v-model="select">
+					<option disabled value="">please choose</option>
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+				</select>
+				<span>Selected: {{select}}</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#App',
+				data: {
+					message: '',
+					multipleMessage: '',
+					checkNames: [],
+					pick: '',
+					select: ''
+				}
+			})
+		</script>
+	</body>
+</html>
