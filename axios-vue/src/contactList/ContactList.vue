@@ -61,21 +61,17 @@ export default{
 	
 	methods:{
 		// 获取联系人列表
-		getList() {
-			this.instance.get('/contactList')
-			.then(res=>{
-				this.list = res.data.data
-			}).catch(()=>{
-				Toast('请求失败，请稍后再试')
-			})
+		async getList() {
+			let res = await this.$Http.getContactList()
+			this.list = res.data
 		},
 		// onSelect() {
 		// 	this.showList = false;
 		// },
 		// 添加联系人
 		onAdd(){
-			this.showEdit = true; 
-			this.isEdit = false;
+			this.showEdit = true
+			this.isEdit = false
 			console.log(this.showEdit)
 		},
 		//编辑联系人
