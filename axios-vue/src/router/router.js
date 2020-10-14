@@ -24,6 +24,11 @@ const routes = [
 	path: '/promiserequest',
 	name: 'axios并发请求',
 	component: () => import('../views/PromiseRequest.vue')
+  },
+  {
+	path: '/contactlist',
+	name: '联系人列表',
+	component: () => import('../contactList/ContactList.vue')
   }
 ]
 
