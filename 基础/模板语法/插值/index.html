@@ -6,11 +6,16 @@
 		<script src="./vue.js" type="text/javascript" charset="UTF-8"></script>
 	</head>
 	<body>
-		<div id="App" v-once>
+		<div id="App">
 			<span>Message: {{a}}</span>
+			<p>{{count}}</p>
+			<p>{{count+1}}</p>
 			<p>using mustaches: {{rawHtml}}</p>
 			<p v-html="rawHtml"></p>
 			<div v-bind:class="color">test</div>
+			<a href="http://www.baidu.com">百度</a>
+			<a v-bind:href="url">慕课</a>
+			<button type="button" @click="submit()">加数字</button>
 		</div>
 
 		<script type="text/javascript">
@@ -18,11 +23,18 @@
 				el: '#App',
 				data:{
 					a: 'first message',
+					count: 0,
 					rawHtml: '<span style = "color:red"> this string is red </span>',
-					color:'blue'
+					color:'blue',
+					url: 'http://www.imooc.com'
+				},
+				methods:{
+					submit:function(){
+						vm.count ++
+					}
 				}
 			})
-			vm.a = '2 '
+			vm.a = '2'
 		</script>
 		<style>
 			.red{color: red;}
