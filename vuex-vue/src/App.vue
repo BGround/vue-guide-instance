@@ -1,23 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 	<h1>count:{{this.$store.state.count}}</h1>
 	<button @click="increaseCount">点我自增</button>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
   },
   methods: {
 	increaseCount(){
-		this.$store.commit('countIncrease')
+		this.$store.commit('countIncrease') 
 	}
   }
 }
