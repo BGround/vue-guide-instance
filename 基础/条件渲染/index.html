@@ -12,10 +12,12 @@
 	</head>
 	<body>
 		<div id="App">
-			<div v-if="type === 'A'">a</div>
-			<div v-else-if="type === 'B'">b</div>
-			<div v-else-if="type === 'C'">c</div>
-			<div v-else>Not a/b/c</div>
+			<template>
+				<div v-if="type === 'A'">a</div>
+				<div v-else-if="type === 'B'">b</div>
+				<div v-else-if="type === 'C'">c</div>
+				<div v-else>Not a/b/c</div>
+			</template>
 			
 			<h1 v-show="show">hi vue</h1>
 		</div>
@@ -24,8 +26,8 @@
 			var vm = new Vue({
 				el:'#App',
 				data:{
-					type: 'B',
-					show: 'yes'
+					type: 'D',
+					show: false // show: ''都css中display属性为none
 				}
 			})
 		</script>
