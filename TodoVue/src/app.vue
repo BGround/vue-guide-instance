@@ -14,7 +14,9 @@ import todo from './todo/todo.vue'
 
 export default {
     data() {
-
+        return {
+            
+        }
     },
     components: {
         Header,
