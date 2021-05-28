@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const path = require('path')                                             //path是Nodejs中的基本包,用来处理路径
 const HTMLPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -35,20 +36,20 @@ const config = {
                 test: /\.jsx$/,
                 loader: 'babel-loader'
             },
-            {
-                test: /\.styl/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    'stylus-loader'
-                ]
-            },
+            // {                                           // 因为MiniCssExtractPlugin 需要根据生产环境设置
+            //     test: /\.styl/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader',
+            //         {
+            //             loader: 'postcss-loader',
+            //             options: {
+            //                 sourceMap: true
+            //             }
+            //         },
+            //         'stylus-loader'
+            //     ]
+            // },
             {
                 test: /\.(jpg|gif|jpeg|png|svg)$/,
                 use: [
@@ -75,6 +76,20 @@ const config = {
 }
 // config.devtool = isDev ? false : '#cheap-module-eval-source-map'     //官方推荐使用这个配置,作用是在浏览器中调试时,显示的代码和我们的项目中的代码会基本相似,而不会显示编译后的代码,以致于我们调试连自己都看不懂
 if(isDev) {
+    config.module.rules.push({
+        test: /\.styl/,
+        use: [
+            'style-loader',
+            'css-loader',
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            'stylus-loader'
+        ]
+    })
     config.devServer = {                                             //这个devServer的配置是在webpack2.x以后引入的,1.x是没有的
         port: 8000,
         host: '0.0.0.0',                                             //可以设置0.0.0.0 ,这样设置你可以通过127.0.0.1或则localhost去访问
@@ -88,6 +103,28 @@ if(isDev) {
     config.plugins.push(                                            //添加两个插件用于hot:true的配置
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
+    )
+} else {
+    config.output.filename = '[name].[chunkhash:8].js'             //此处一定是chunkhash,因为用hash时app和vendor的hash码是一样的了,这样每次业务代码更新,vendor也会更新,也就没有了意义.
+    config.module.rules.push({
+        test: /\.styl/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            'stylus-loader'
+        ]
+    }),
+    config.plugins.push(
+        new MiniCssExtractPlugin({                            //定义打包分离出的css文件名
+            filename: "[name].css",
+            chunkFilename: "styles.[contentHash:8].css"
+        })      
     )
 }
 
