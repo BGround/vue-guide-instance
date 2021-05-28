@@ -105,6 +105,10 @@ if(isDev) {
         new webpack.NoEmitOnErrorsPlugin()
     )
 } else {
+    config.entry = {
+        app: path.join(__dirname, './src/index.js'),
+        vendor: ['vue']
+    }
     config.output.filename = '[name].[chunkhash:8].js'             //此处一定是chunkhash,因为用hash时app和vendor的hash码是一样的了,这样每次业务代码更新,vendor也会更新,也就没有了意义.
     config.module.rules.push({
         test: /\.styl/,
@@ -122,10 +126,22 @@ if(isDev) {
     }),
     config.plugins.push(
         new MiniCssExtractPlugin({                            //定义打包分离出的css文件名
-            filename: "[name].css",
+            // filename: "[name].css",
             chunkFilename: "styles.[contentHash:8].css"
-        })      
+        })   
     )
+    /*webpack4 特有的打包优化选项*/
+    /*https://webpack.docschina.org/plugins/split-chunks-plugin/*/
+    config.optimization = {   
+        splitChunks:{
+            cacheGroups: {
+                commons: {
+                    name: "vendor",
+                },
+            },
+        },
+        runtimeChunk: true
+    }
 }
 
 module.exports = config
