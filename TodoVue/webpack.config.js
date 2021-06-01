@@ -3,6 +3,7 @@ const path = require('path')                                             //path�
 const HTMLPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');         //每次编译打包时自动删除之前dist目录，webpack V4之后构建方式改变
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -71,7 +72,8 @@ const config = {
             }
         }),
         new HTMLPlugin(),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new CleanWebpackPlugin(),
     ]
 }
 // config.devtool = isDev ? false : '#cheap-module-eval-source-map'     //官方推荐使用这个配置,作用是在浏览器中调试时,显示的代码和我们的项目中的代码会基本相似,而不会显示编译后的代码,以致于我们调试连自己都看不懂
@@ -125,7 +127,7 @@ if(isDev) {
         ]
     }),
     config.plugins.push(
-        new MiniCssExtractPlugin({                            //定义打包分离出的css文件名
+        new MiniCssExtractPlugin({                            //定义打包分离出的css文件名,contenthash文件指纹
             // filename: "[name].css",
             chunkFilename: "styles.[contentHash:8].css"
         })   
