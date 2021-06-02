@@ -13,7 +13,8 @@ const config = {
     entry: path.join(__dirname, './src/index.js'),                       //声明js文件入口,__dirname就是我们文件的根目录,用join拼接
     output: {                                                            //声明出口文件
         filename: 'bundle.js',
-        path: path.join(__dirname, 'dist')
+        path: path.join(__dirname, 'dist'),
+        // clean: true                                                   //可以使用cleanwebpackplugin，也可以直接使用此属性——Clean the output directory before emit 
     },
     stats: {
         children: false,
@@ -101,7 +102,7 @@ if(isDev) {
         // open: true ,                                              //项目启动时,会默认帮你打开浏览器
         hot: true                                                   //在单页面应用开发中,我们修改了代码后是整个页面都刷新,开启hot后,将只刷新对应的组件
     }
-    config.devtool = isDev ? false : '#cheap-module-eval-source-map' //webpack5+版本下需要严格设置'false'
+    config.devtool = isDev ? false : '#eval-cheap-module-source-map' //webpack5+版本下需要严格设置'false'
     config.plugins.push(                                            //添加两个插件用于hot:true的配置
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
@@ -130,6 +131,10 @@ if(isDev) {
         new MiniCssExtractPlugin({                            //定义打包分离出的css文件名,contenthash文件指纹
             // filename: "[name].css",
             chunkFilename: "styles.[contentHash:8].css"
+        }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./dist/vendors-manifest.json')
         })   
     )
     /*webpack4 特有的打包优化选项*/
