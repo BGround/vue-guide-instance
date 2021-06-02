@@ -3,8 +3,9 @@ const library = '[name]_lib'
 const path = require('path')
 
 module.exports = {
+  mode: 'production',
   entry: {
-    vendors: ['vue']
+    vendors: ['vue']                                    // 对vue等库单独打包
   },
 
   output: {

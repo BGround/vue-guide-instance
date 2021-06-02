@@ -74,7 +74,7 @@ const config = {
         }),
         new HTMLPlugin(),
         new VueLoaderPlugin(),
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
     ]
 }
 // config.devtool = isDev ? false : '#cheap-module-eval-source-map'     //官方推荐使用这个配置,作用是在浏览器中调试时,显示的代码和我们的项目中的代码会基本相似,而不会显示编译后的代码,以致于我们调试连自己都看不懂
