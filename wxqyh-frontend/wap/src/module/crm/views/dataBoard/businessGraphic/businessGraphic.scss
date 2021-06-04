@@ -1,0 +1,185 @@
+@import '../../../crmBase.scss';
+
+.businessBox{
+  background: #fff;
+  .header{
+    height: rem(46);
+  }
+  .content{
+    padding:0 rem(13);
+    background: #ffff;
+    .businessNumBox{
+      text-align: center;
+      height: rem(91);
+      width: 100%;
+      padding: rem(29) 0 0 0;
+      .totalNum{
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 500;
+        color: rgba(247,97,96,1);
+      }
+      .businessSumNum{
+        margin-top: rem(10);
+        height: rem(16);
+        line-height: rem(16);
+        font-size: rem(13);
+        color: #999;
+        i{
+            position: relative;
+            display: inline-block;
+            width: rem(16);
+            height: rem(16);
+            text-align: center;
+            background: rgba(204,204,204,1);
+            font-size: rem(16);
+            color: #fff;
+            border-radius: 50%;
+            .businessNum-tip{
+                position: absolute;
+                top: rem(23);
+                left: rem(-165);
+                width: rem(276);
+                padding: rem(10) rem(7);
+                background: rgba(0,0,0,0.8);
+                font-size: rem(12);
+                text-align: justify;
+                line-height: 19px;
+                border-radius: rem(2);
+                box-shadow: 0 0 rem(10) #999;
+                z-index: 1;
+            }
+            em{
+                position: absolute;
+                top: -5px;
+                left: rem(166);
+                width: 0;
+                height: 0;
+                border-right: rem(7) solid transparent;
+                border-bottom: rem(6) solid #333;
+                border-left: rem(7) solid transparent;
+            }
+        }
+      }
+    }
+    .businessListImage{
+    //   margin-top: rem(28);
+      height: rem(178);
+      width: 100%;
+      display: flex;
+      .list-left{
+        position: relative;
+        width: rem(187);
+        height: 100%;
+        flex: 3;
+        .leftRing{
+            position: relative;
+            height:50%;
+            width:rem(150);
+            margin:0 auto;
+            .winSum{
+                width: 100%;
+                left: rem(55);
+                text-align: center;
+                .winSumNumber{
+                    font-size: 20px;
+                    font-family: PingFangSC-Regular;
+                    font-weight: 400;
+                    color: rgba(10,23,53,1);
+                }
+                .winSumText{
+                    font-size: 13px;
+                    font-family: PingFangSC-Regular;
+                    font-weight: 400;
+                    color: rgba(153,153,153,1);
+                }
+            }
+            .ringNum{
+                position: absolute;
+                width: rem(45);
+                height: rem(47);
+                top: rem(25);
+                left: rem(52);
+                text-align: center;
+                .singleNum{
+                    font-size:17px;
+                    font-family:PingFangSC-Regular;
+                    font-weight:400;
+                    color:rgba(247,97,96,1);
+                }
+                .singlePercent{
+                    font-size:13px;
+                    font-family:PingFangSC-Regular;
+                    font-weight:400;
+                    color:rgba(153,153,153,1);
+                }
+            }
+        }
+      }
+      .list-center{
+          flex: 1;
+          width: rem(1);
+          position: relative;
+          height: rem(114);
+          .separationLine{
+            background: #d8d8d8;
+            opacity: 0.3;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: rem(24);
+            left: 50%;   
+          }
+      }
+      .list-right{
+        flex: 3;
+        width: rem(187);
+        height: 100%;
+        position: relative;
+        .rightRing{
+            position: relative;
+            height:50%;
+            width:rem(150);
+            margin:0 auto;
+            .loseSum{
+                width: 100%;
+                left: rem(55);
+                text-align: center;
+                .loseSumNumber{
+                    font-size: 20px;
+                    font-family: PingFangSC-Regular;
+                    font-weight: 400;
+                    color: rgba(10,23,53,1);
+                }
+                .loseSumText{
+                    font-size: 13px;
+                    font-family: PingFangSC-Regular;
+                    font-weight: 400;
+                    color: rgba(153,153,153,1);
+                }
+            }
+            .ringNum{
+                position: absolute;
+                width: rem(45);
+                height: rem(47);
+                top: rem(25);
+                left: rem(52);
+                text-align: center;
+                .singleNum{
+                    font-size:17px;
+                    font-family:PingFangSC-Regular;
+                    font-weight:400;
+                    color:#09BB07;
+                }
+                .singlePercent{
+                    font-size:13px;
+                    font-family:PingFangSC-Regular;
+                    font-weight:400;
+                    color:rgba(153,153,153,1);
+                }
+            }
+        }
+      }
+    }
+  }
+}

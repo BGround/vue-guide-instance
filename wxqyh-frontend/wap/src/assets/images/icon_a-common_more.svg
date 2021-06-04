@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_a-common_more</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="347" height="124" rx="8"></rect>
+        <filter x="-5.5%" y="-13.7%" width="111.0%" height="130.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.698039216   0 0 0 0 0.725490196   0 0 0 0 0.784313725  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="20180810" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D1_首页" transform="translate(-331.000000, -336.000000)">
+            <rect id="Rectangle-12" fill="#FFFFFF" fill-rule="nonzero" x="0" y="152" width="375" height="588"></rect>
+            <g id="阅读流（配图）-copy-6" transform="translate(14.000000, 322.000000)">
+                <g id="box" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="347" height="45"></rect>
+                <g id="icon16*16/btn_more" transform="translate(317.000000, 14.000000)">
+                    <g id="btn_more">
+                        <rect id="cherkbox" x="0" y="0" width="16" height="16"></rect>
+                        <circle id="Oval" fill="#B2B9C8" cx="13.75" cy="8" r="1.25"></circle>
+                        <circle id="Oval-Copy" fill="#B2B9C8" cx="8" cy="8" r="1.25"></circle>
+                        <circle id="Oval-Copy-2" fill="#B2B9C8" cx="2.25" cy="8" r="1.25"></circle>
+                    </g>
+                </g>
+                <g id="btn_more" transform="translate(317.000000, 14.000000)">
+                    <rect id="cherkbox" x="0" y="0" width="16" height="16"></rect>
+                    <circle id="Oval" fill="#B2B9C8" cx="13.75" cy="8" r="1.25"></circle>
+                    <circle id="Oval-Copy" fill="#B2B9C8" cx="8" cy="8" r="1.25"></circle>
+                    <circle id="Oval-Copy-2" fill="#B2B9C8" cx="2.25" cy="8" r="1.25"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

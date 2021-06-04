@@ -1,0 +1,56 @@
+@mixin pt15{
+  padding-top: 15px;
+}
+@mixin pt20{
+  padding-top: 20px;
+}
+.qwui-dotted_line{
+  border-right:1px dashed #cfcfcf;
+  margin: 0 8px 0 5px;
+}
+.qwui-list_wrap{
+  position: relative;
+  /*@include pt15;*/
+  height: 100%;
+  box-sizing: border-box;
+
+  .qwui-top_main_bar{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    @include pt20;
+
+    .qwui-bar_left{
+      flex:1;
+    }
+
+    .qwui-bar_right{
+      .qwui-senior_search_btn{
+        cursor: pointer;
+        float: right;
+        font-size: 12px;
+        height: 35px;
+        line-height: 16px;
+        margin: 0 5px;
+        padding: 0 3px;
+        text-align: center;
+        width: 30px;
+        color:#f87b00;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+  .qwui-table_wrap{
+    @include pt15;
+  }
+}
+.labelStyle {
+  display: inline-block;
+  //margin: 2px;
+  border: 1px solid #ddd;
+  background: #eee;
+  padding: 3px;
+  border-radius: 2px;
+}

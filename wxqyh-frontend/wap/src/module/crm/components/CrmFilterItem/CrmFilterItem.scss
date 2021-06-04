@@ -1,0 +1,56 @@
+@import '../../crmBase.scss';
+
+.crm_filter_item{
+    height: 100%;
+    font-size: rem(14);
+    .filter_item_wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .name,
+    .top{
+        position: relative;
+        padding-right: rem(18);
+        max-width: 85%;
+        @include ellipsis;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            width: rem(12);
+            height: rem(6);
+            background: url('~assets/images/icon_form_arrow_toggle.png') no-repeat;
+        }
+    }
+    .top{
+        &:after{
+            background-position: -10px 0;
+        }
+    }
+    .radio_select_wrap{
+        position: absolute;
+        background: #fff;
+        left: 0;
+        top: rem(45);
+        z-index: 2;
+        width: 100%;
+        max-height: rem(200);
+        overflow-y: auto;
+    }
+    .crm_filter_overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}

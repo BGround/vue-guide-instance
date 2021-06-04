@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-1" transform="translate(-333.000000, -208.000000)">
+            <g id="btn_a-common_add-24" transform="translate(333.000000, 208.000000)">
+                <circle id="椭圆形" fill="#85868F" cx="12" cy="12" r="12"></circle>
+                <path d="M12.75,11.25 L17.25,11.25 C17.6642136,11.25 18,11.5857864 18,12 C18,12.4142136 17.6642136,12.75 17.25,12.75 L12.75,12.75 L12.75,17.25 C12.75,17.6642136 12.4142136,18 12,18 C11.5857864,18 11.25,17.6642136 11.25,17.25 L11.25,12.75 L6.75,12.75 C6.33578644,12.75 6,12.4142136 6,12 C6,11.5857864 6.33578644,11.25 6.75,11.25 L11.25,11.25 L11.25,6.75 C11.25,6.33578644 11.5857864,6 12,6 C12.4142136,6 12.75,6.33578644 12.75,6.75 L12.75,11.25 Z" id="合并形状" fill="#FFFFFF" fill-rule="nonzero" transform="translate(12.000000, 12.000000) rotate(45.000000) translate(-12.000000, -12.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+@import '../../crmBase.scss';
+
+.crm_scroll_wrap{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        display: none
+    }
+}

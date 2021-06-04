@@ -1,0 +1,28 @@
+.qw-tabs{
+    .qw-tabs-wrap{
+        .qw-tabs-nav{
+            .title{
+                padding: 22px;
+                margin: 0 20px;
+                font-size: 20px;
+                cursor: pointer;
+                color: #666;
+                user-select: none;
+                &.active{
+                    position: relative;
+                    color: #333;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        height: 4px;
+                        background: #C31725;
+                    }
+                }
+
+            }
+        }
+    }
+}

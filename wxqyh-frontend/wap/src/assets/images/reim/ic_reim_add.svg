@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_A-FK_add_expense</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-添加" transform="translate(-27.000000, -409.000000)">
+            <g id="icon_A-FK_add_expense" transform="translate(27.000000, 409.000000)">
+                <circle id="Oval-Copy-3" fill="#F3F7FD" cx="33" cy="33" r="33"></circle>
+                <g id="Group-9" transform="translate(20.077775, 21.948534)">
+                    <rect id="Rectangle-3" fill="#458BE9" x="0" y="0" width="25.190291" height="23.0911001" rx="1"></rect>
+                    <path d="M15.6943364,6.29757276 L26.2894819,6.29757276 C26.8417667,6.29757276 27.2894819,6.74528801 27.2894819,7.29757276 L27.2894819,14.7439319 C27.2894819,15.2962166 26.8417667,15.7439319 26.2894819,15.7439319 L15.6943364,15.7439319 C15.1420517,15.7439319 14.6943364,15.2962166 14.6943364,14.7439319 L14.6943364,7.29757276 C14.6943364,6.74528801 15.1420517,6.29757276 15.6943364,6.29757276 Z" id="Rectangle" fill="#458BE9"></path>
+                    <path d="M21.9919092,9.44635914 L23.1406956,9.44635914 C23.6929803,9.44635914 24.1406956,9.89407439 24.1406956,10.4463591 L24.1406956,11.5951455 C24.1406956,12.1474303 23.6929803,12.5951455 23.1406956,12.5951455 L21.9919092,12.5951455 C21.4396244,12.5951455 20.9919092,12.1474303 20.9919092,11.5951455 L20.9919092,10.4463591 C20.9919092,9.89407439 21.4396244,9.44635914 21.9919092,9.44635914 Z" id="Rectangle-4" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

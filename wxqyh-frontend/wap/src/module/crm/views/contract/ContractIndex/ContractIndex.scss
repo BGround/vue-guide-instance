@@ -1,0 +1,104 @@
+@import '../../../crmBase.scss';
+
+.contract_index{
+    .contract_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(140);
+        background: #5077AA;
+        cursor: pointer;
+        .contract_msg{
+            text-align: center;
+            color: #fff;
+            .number{
+                font-size: rem(50);
+                font-weight: 300;
+            }
+            .title{
+                font-size: rem(16);
+            }
+            .tips{
+                margin-top: rem(7);
+                font-size: rem(11);
+                color: #B5C3D7;
+            }
+        }
+    }
+    .contract_opreate_list{
+        padding-top: rem(6);
+        .opreate_title{
+            position: relative;
+            padding-left: rem(15);
+            height: rem(34);
+            line-height: rem(34);
+            font-size: rem(14);
+            color: #999;
+            &:after{
+                @include underLine;
+            }
+        }
+        .opreate_box{
+            position: relative;
+            display: flex;
+            background: #fff;
+            &:after{
+                @include underLine;
+            }
+            .box_item{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                height: rem(112);
+                text-align: center;
+                color: #333;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    border-right: 1px solid #e5e5e5;
+                    transform: scaleX(0.5);
+                    transform-origin: 0 0;
+                }
+                &:last-child{
+                    &:after{
+                        content: normal;
+                    }
+                }
+                .draft_num{
+                    color: #999;
+                }
+                .item_icon{
+                    display: block;
+                    margin-bottom: rem(12);
+                    width: rem(50);
+                    height: rem(50);
+                }
+                .add_icon{
+                    background: url('~assets/images/crm/ic_1.png') no-repeat;
+                    background-size: 100%;
+                }
+                .draft_icon{
+                    background: url('~assets/images/crm/ic_7.png') no-repeat;
+                    background-size: 100%;
+                }
+                .my_create_icon{
+                    background: url('~assets/images/crm/ic_9.png') no-repeat;
+                    background-size: 100%;
+                }
+                .my_charge_icon{
+                    background: url('~assets/images/crm/ic_8.png') no-repeat;
+                    background-size: 100%;
+                }
+                .all_contract_icon{
+                    background: url('~assets/images/crm/ic_2.png') no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}

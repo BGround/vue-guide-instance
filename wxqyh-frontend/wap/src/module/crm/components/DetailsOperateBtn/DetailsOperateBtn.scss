@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1024px){
+  .qwui-bottomOperateBtn,
+  .qwui-detail-mask,
+  .qwui-moreBtn{
+    width: 740px !important;
+    margin: 0 auto;
+  }
+}
+.qwui-bottomOperateBtn{
+  display: flex;
+  flex: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-top: 1px solid #f3f3f3;
+}
+.commentBtn,.editBtn,.transferBtn,
+.distributeBtn,.transferPoolBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.distributeBtn p,.receiveBtn p{
+  color: #5585f0;
+}
+.receiveBtn,.delPoolBtn{
+  width: 100%;
+  text-align: center;
+}
+.inputBox {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex: 1;
+}
+.input{
+  margin: 5px 0 6px 15px ;
+  padding-left: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height:36px;
+  text-align: left;
+  line-height: 36px;
+  color: #999;
+  font-size: 15px;
+  background:rgba(245,245,245,1);
+  border-radius:5px;
+}
+.bottomButton{
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  color: #333;
+  font-size: 16px;
+}
+.moreBtn{
+  width: 42px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  color: #B2B9C8;
+  font-size: 15px;
+}
+.bottomButton p{
+  display: inline-block;
+}
+.bottomButton p:before{
+  display: inline-block;
+  content: '';
+  margin-top: -4px;
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.moreBtn p:before{
+  content: '';
+  margin-right: 0;
+  padding-left: 10px;
+  width: 0;
+  border-left: 1px solid #DADDE4;
+}
+.noBottomBtn p{
+  margin-left: 10px;
+}
+.noBottomBtn p:before{
+  content: normal;
+}
+.bottomButton.delPoolBtn p:before{
+  width: 0px;
+}
+.commentBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_comment.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+.editBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_edit.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+.transferBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_transfer.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+.distributeBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_distrbute.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+.transferPoolBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_transferPool.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+.receiveBtn p:before{
+  background: url("../../../../assets/images/crm/ic_operateBtn_lingqu.png") no-repeat 0px 0px;
+  background-size: 20px 20px;
+}
+/*更多按钮*/
+.qwui-detail-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+.qwui-moreBtn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  width: 100%;
+  background: #FCFCFC;
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3){
+  .qwui-moreBtn {
+    bottom: 34px;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+  .qwui-moreBtn {
+    bottom: 34px;
+  }
+}
+.des_moreButton{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.des_moreButton p{
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+}
+.delBtn,.delPoolBtn{
+  color: #E94F4F;
+}
+.qwui-moreBtn .cancelBtn{
+  border-top: 6px solid #eee;
+  border-bottom: none;
+}
+
+/* 弹窗动画 */
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  bottom: -312px;
+}
+.slide-fade-enter-to, .slide-fade-leave {
+  bottom: 0;
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3){
+  .slide-fade-enter-to, .slide-fade-leave {
+    bottom: 34px;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+  .slide-fade-enter-to, .slide-fade-leave {
+    bottom: 34px;
+  }
+}
+.fade-enter-active {
+  transition: all .5s ease;
+}
+.fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
+

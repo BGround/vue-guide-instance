@@ -1,0 +1,61 @@
+.qwui-markPerson {
+    line-height: initial;
+    .markPerson_button {
+        width: 340px;
+        line-height: 48px;
+        color: #999;
+        text-align: center;
+        border-radius:2px;
+        border:1px dashed rgba(203,203,203,1);
+        cursor: pointer;
+    }
+    .markPerson_list {
+        width: 764px;
+        min-height: 178px;
+        max-height: 310px;
+        border-radius:2px;
+        border:1px dashed rgba(203,203,203,1);
+        .list_header {
+            line-height: 44px;
+            padding: 0 22px;
+            color: #333;
+            .orange {
+                color: #F87B00;
+            }
+        }
+        .list_content {
+            min-height: 90px;
+            max-height: 220px;
+            overflow: auto;
+            .list_content_add{
+                display: block;
+                width: 156px;
+                height: 32px;
+                line-height: 32px;
+                margin: 6px 48px;
+                font-size: 14px;
+                color: #808080;
+                text-align: center;
+                border:1px dashed rgba(203,203,203,1);
+                cursor: pointer;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background: url(~assets/images/ic_b-add.png) no-repeat;
+                    background-size: cover;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .list_footer{
+            line-height: 44px;
+            padding: 0 22px;
+            color: #333;
+            .gray{
+                color: #a6a6a6;
+            }
+        }
+    }
+}

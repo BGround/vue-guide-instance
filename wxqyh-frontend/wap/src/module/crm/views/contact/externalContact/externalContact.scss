@@ -1,0 +1,64 @@
+@import '../../../crmBase.scss';
+.crmContact{
+    position: relative;
+    background: #fff;
+    height: 100%;
+    .contactBtn{
+        display: flex;
+        background: #fff;
+        padding: rem(5) rem(14) rem(4) rem(14);
+        box-sizing: border-box;
+        width: 100%;
+        height: rem(50);
+        position: fixed;
+        bottom: 0;
+        // left: 0;
+        // margin-bottom: -20px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            width: 100%;
+            border-bottom: 1px solid #E6E6E6;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+        .btn_cancle{
+            flex: 1;
+            text-align: center;
+            width: rem(167);
+            height: rem(41);
+            background: #B0B9C9;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+        .btn_confirm{
+            flex: 1;
+            text-align: center;
+            width: rem(167);
+            height: rem(41);
+            background: #4487F8;
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin-left: rem(13);
+        }
+        .btn_text{
+            color: #fff;
+            font-size: 15px;
+            line-height: rem(41);
+        }
+    }
+    .wrap{
+        width: 100%;
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .wrap {
+          width: 740px;
+          margin: 0 auto;
+        }
+    }
+}

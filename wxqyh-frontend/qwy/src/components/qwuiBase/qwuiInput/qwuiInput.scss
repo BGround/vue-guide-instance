@@ -1,0 +1,110 @@
+@import '@/assets/scss/base.scss';
+
+.inlineBlock{
+    display: inline-block;
+    ::-webkit-input-placeholder{
+        color: #ccc !important;
+    }
+}
+
+.qw_input, .qw_textarea{
+    color: #333;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+.input_wrap{
+    position: relative;
+    display: flex;
+    font-size: 0;
+    .qw_input{
+        font-size: 14px;
+        height: 32px;
+    }
+    .qw_baseInput{
+        padding: 0 10px 0 10px;
+        width: 340px;
+    }
+    .qw_textInput{
+        padding: 0 72px 0 10px;
+        width: 340px;
+    }
+    .qw_sortInput{
+        padding: 6px 4px;
+        width: 60px;
+    }
+    .qw_banInput{
+        padding: 0 60px 0 10px;
+        width: 300px;
+        color: #999;
+        background: #eee;
+        cursor: not-allowed;
+    }
+    .qw_searchInput{
+        padding: 10px 7px;
+        width: 170px;
+        border-radius: 0;
+    }
+    .search_btn{
+        width: 32px;
+        height: 32px;
+        border: 1px solid #ccc;
+        border-left: none;
+        background: url(../../../assets/images/search_icon.png) no-repeat center;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .qw_treeInput{
+        padding: 8px 10px;
+        width: 180px;
+        height: 28px;
+    }
+    .qw_readOnlyInput{
+      padding: 0 10px 0 10px;
+      width: 340px;
+      &:hover{
+        cursor: not-allowed;
+      }
+    }
+    .input_tips{
+        position: absolute;
+        top: 0;
+        right: 8px;
+        line-height: 32px;
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+    }
+}
+
+.textarea_wrap{
+    position: relative;
+    font-size: 0;
+    .qw_textarea{
+        padding: 6px 4px;
+        width: 600px;
+        height: 120px;
+        font-family: 'Microsoft Yahei','simsun','arial','tahoma';
+        font-size: 14px;
+    }
+    .textarea_tips{
+        position: absolute;
+        bottom: 10px;
+        right: 8px;
+        height: 20px;
+        font-size: 12px;
+        color: #999;
+        text-align: right;
+    }
+}
+
+.redBorder{
+    border: 1px solid #F56262;
+}
+
+.warningTips{
+    width: 340px;
+    color: #F56262;
+}

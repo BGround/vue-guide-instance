@@ -1,0 +1,10 @@
+@import '../../../crmBase.scss';
+// 调整统计栏固定在顶部
+.crm_list_main {
+  display: flex;
+  flex-direction: column;
+}
+.crm-list-content {
+  flex: 1;
+  overflow: auto;
+}

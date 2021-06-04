@@ -1,0 +1,64 @@
+.order_container {
+  .order_item {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      line-height: 30px;
+      height: 30px;
+      margin-right: 2px;
+      color: #666;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    &.desc {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background: url('~assets/images/arrow_normal.png') no-repeat 100% center
+      }
+
+      &:hover {
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          vertical-align: middle;
+          background: url('~assets/images/arrow_on.png') no-repeat 100% center
+        }
+      }
+    }
+
+    &.asc {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background: url('~assets/images/arrow_normal_up.png') no-repeat 100% center
+      }
+
+      &:hover {
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          vertical-align: middle;
+          background: url('~assets/images/arrow_on_up.png') no-repeat 100% center
+        }
+      }
+    }
+
+  }
+}

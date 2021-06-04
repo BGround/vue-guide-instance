@@ -1,0 +1,139 @@
+
+$baseUrl: '~assets/images/';
+$formUrl: '../../../assets/images/';
+@mixin background($url) {
+    background: url($baseUrl + $url) no-repeat;
+    background-size: contain;
+}
+
+.option {
+    position: relative;
+    height: 60px;
+    margin-left: 30px;
+    padding-left: 52px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #0A1736;
+    box-shadow: 0px -1px 0px 0px rgba(247,248,250,1);
+    cursor: pointer;
+    // &:active {
+    //     background: #F7F8FA;
+    // }
+    &::after {
+        right: -5px;
+    }
+    &.tag-list {
+        margin-left: 0;
+        padding-left: 0;
+        .tag-item {
+            height: 60px;
+            padding-left: 40px;
+            border-radius: 4px;
+            font-size: 15px;
+            line-height: 60px;
+            color: #0A1736;
+            .select-icon {
+                left: 0;
+            }
+        }
+        .tag .form {
+            padding-left: 60px;
+            .icon-font {
+                left: 25px;
+            }
+        }
+    }
+    .drag-icon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 16px;
+        height: 12px;
+        transform: translateY(-50%);
+        transition: all .3s ease;
+        @include background('icon_down_gray.png');
+        &.active {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    .select-icon {
+        display: inline-block;             
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        &.checkbox {
+            @include background('icon_form_check-unselected.png');      
+        }
+        &.checkbox.active {
+            @include background('icon_form_check-checked.png');            
+        }
+        &.radio {
+            @include background('icon_form_single-unselected.png');                  
+        }
+        &.radio.active {
+            @include background('icon_form_single-checked.png');                              
+        }
+    }
+    .app-icon {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        font-family: homeicon !important;
+        background-color: #F7F8FA;
+        transform: translateY(-50%);
+    }
+    .name {
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        top: 50%;
+        padding-right: 60px;
+        overflow: hidden;
+        max-height: 60px;
+        transform: translateY(-50%);
+    }
+    .detail-num {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        width: 40px;
+        line-height: 60px;
+        color: #B2B9C8;
+        transform: translateY(-50%);
+    }
+    .icon-font {
+        position: absolute;
+        display: inline-block;
+        left: 7px;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center;
+        transform: translateY(-50%);
+        &.bd-putongdan {
+            background-image: url($formUrl + 'ic_a-grouping_common@2x.png');
+        }
+        &.bd-renwudan {
+            background-image: url($formUrl + 'ic_a-grouping_task@2x.png');
+        }
+        &.bd-shenpidan {
+            background-image: url($formUrl + 'ic_a-grouping_approv@2x.png');
+        }
+        &.bd-waibudan {
+            background-image: url($formUrl + 'ic_a-grouping_cities@2x.png');
+        }
+    }
+}

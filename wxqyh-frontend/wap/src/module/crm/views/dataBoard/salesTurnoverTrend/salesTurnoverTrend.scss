@@ -1,0 +1,122 @@
+@import '../../../crmBase.scss';
+
+.saleBox{
+  background: #fff;
+  .header{
+    height: rem(46);
+  }
+  .saleContent{
+        // height: 100%;
+        background: #ffff;
+        .moneyTab{
+            display: flex;
+            position: relative;
+            height: 30px;
+            padding-top: 28px;
+            text-align: center;
+            .tabText{
+                font-size: 16px;
+                color: #999;
+                font-weight:400;
+                line-height:22px;
+                flex: 1;
+                position: relative;
+                cursor: pointer;
+                &.active{
+                    color: #779AF8;
+                }
+                .tabBar{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 36px;
+                    height: 3px;
+                    background:rgba(119,154,248,1);
+                    border-radius:2px;
+                    margin: 0 auto;
+                }
+            }
+            .tabLeftText:first-child {
+                border-right:1px solid rgba(238,238,238,1)
+            }
+        }
+        .trend-money{
+            text-align: center;
+            color: #666;
+            font-size: 0;
+            padding-top: 20px;
+            background: #fff;
+            .totalValue{
+                font-size: 24px;
+                color: #f76160;
+                .moneyUnit{
+                    font-size: rem(11);
+                    color: #BBBBBB;
+                }
+            }
+            .moneyText{
+                color: #666666;
+                font-size: 14px;
+            }
+        }
+        .legendText{
+            padding: 22px 30px 0 0;
+            font-size: 10px;
+            color: #666;
+            text-align: right;
+            .legendColor{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: #7AABF5;
+                vertical-align: middle;
+            }
+        }
+        .no-chart-content{
+            padding-left: 15px;
+            // position: relative;
+            // padding-top: 74%;
+        }
+        .no-trends{
+            // position: absolute;
+            // top: 0;
+            // left: 15px;
+            // width: 100%;
+            // height: 100%;
+            height: 248px;
+            .tip{
+                margin: auto;
+                // margin-top: 90px;
+            }
+        }
+  }
+  .saleTable{
+        background: #fff;
+        padding: 10px 15px;
+  }
+  table{
+      margin-bottom: 0;
+      td{
+        &.column-color1{
+            color: #B2B9C8;
+        }
+        &.column-color{
+            color: #468CEB;
+        }
+    }
+  }
+}
+@media screen and (min-width: 740px) {
+    %maxWidth{
+        width: 740px !important;
+        margin: 0 auto;
+    }
+    .qwui-warning{
+        @extend %maxWidth;
+    }
+    .data_team_select {
+        @extend %maxWidth;
+        left: auto !important;
+    }
+}

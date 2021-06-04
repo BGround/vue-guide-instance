@@ -1,0 +1,16 @@
+
+.qwui-nav_btn{
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .icon-nav_add{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url('~assets/images/icon-nav_add.png') no-repeat;
+    background-size: contain;
+  }
+}
+

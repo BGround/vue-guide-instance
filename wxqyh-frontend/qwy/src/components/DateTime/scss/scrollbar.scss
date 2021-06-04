@@ -1,0 +1,12 @@
+@import "~assets/scss/common/var";
+@import "~assets/scss/mixins/mixins";
+
+@include b(scrollbar){
+  overflow: hidden;
+  position: relative;
+
+  @include e(wrap) {
+    overflow-y: scroll;
+    height: 100%;
+  }
+}

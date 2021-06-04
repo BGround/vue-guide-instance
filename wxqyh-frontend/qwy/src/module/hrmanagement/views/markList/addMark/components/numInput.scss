@@ -1,0 +1,141 @@
+.qwui-numInput {
+    height: 44px;
+    padding: 6px 22px;
+    &:hover {
+        background-color: #F7F7F7;
+    }
+    .numInput-left_index {
+        float: left;
+        line-height: 32px;
+        min-width: 20px;
+        margin-right: 5px;
+        color: #808080;
+    }
+    .numInput-minselect{
+        float: left;
+        padding: 0;
+        min-height: auto;
+        margin-right: 12px;
+        /deep/ .qwui-form_item_label{
+            width: 0;
+            padding: 0;
+            &::before{
+                content: "";
+            }
+        }
+        /deep/ .qwui-form_item_content{
+            margin-left: 0;
+            .qwui-select{
+                width: 130px;
+                padding: 0 5px;
+                height: 30px;
+            }
+        }
+    }
+    .numInput-left_group{
+        float: left;
+        .numInput-left_item {
+            float: left;
+            width: 100px;
+            padding-right: 3px;
+            height: 32px;
+            line-height: 32px;
+            border-radius:2px;
+            border:1px solid rgba(233,233,233,1);
+            margin-right: 8px;
+            background-color: #fff;
+            white-space: nowrap;
+            word-wrap: normal;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        .numInput-left_head {
+                vertical-align: middle;
+                display: inline-block;
+                position: relative;
+                top: -3px;
+                width: 32px;
+                height: 32px;
+            }
+            .numInput-left_head_default {
+                vertical-align: middle;
+                display: inline-block;
+                position: relative;
+                top: -3px;
+                width: 32px;
+                height: 32px;
+                background: url(~assets/images/touxiang02.png) no-repeat center/32px 32px;
+            }
+        }
+    }
+    .numInput-center_label{
+        float: left;
+        line-height: 32px;
+        min-width: 20px;
+        margin: 0 8px;
+        color: #333;
+        &.numInput-center_btn{
+            color: #3794E3;
+            cursor: pointer;
+            margin: 0;
+        }
+        &.gray{
+            color: #A6A6A6;
+        }
+    }
+    .numInput-center_group {
+        position: relative;
+        top: 0;
+        left: 0;
+        float: left;
+        right: 330px;
+        width: 70px;
+        height: 32px;
+        font-size: 12px;
+        border-radius:2px;
+        border:1px solid rgba(213,213,213,1);
+        overflow: hidden;
+        .numInput-input {
+            font-size: 14px;
+            display: inline-block;
+            width: 100%;
+            padding: 7px 19px 7px 8px;
+            border: none;
+        }
+        .numInput-center_group_add {
+            position: absolute;
+            top: -2px;
+            right: 2px;
+            width: 16px;
+            height: 20px;
+            border-top: 1px solid #D5D5D5;
+            background: url(~assets/images/arrow1.png) no-repeat;
+            transform:rotate(-90deg);
+            background-position: 5px 4px;
+            cursor: pointer;
+        }
+        .numInput-center_group_reduce {
+            position: absolute;
+            bottom: -2px;
+            right: 2px;
+            width: 16px;
+            height: 20px;
+            border-left: 1px solid #D5D5D5;
+            border-bottom: 1px solid #D5D5D5;
+            background: url(~assets/images/arrow1.png) no-repeat;
+            background-position: 5px 3px;
+            transform:rotate(90deg);
+            cursor: pointer;
+        }
+    }
+    .numInput-right_close {
+        float: right;
+        width: 16px;
+        height: 16px;
+        background: url(~assets/images/btn_close.png) no-repeat;
+        margin-top: 8px;
+        cursor: pointer;
+        &:hover{
+            background: url(~assets/images/ic_close.svg) no-repeat;
+        }
+    }
+}

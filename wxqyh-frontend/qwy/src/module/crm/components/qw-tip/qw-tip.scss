@@ -1,0 +1,70 @@
+.tipContainer{
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  padding: 5px 10px;
+  max-height: 60px;
+  font-size: 14px;
+  color: #EEE;
+  background-color: #000000;
+  opacity: 0.6;
+  border-radius: 4px;
+  &.top, &.bottom{
+    .tipAngle{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.top{
+    .tipAngle{
+      top: 0;
+      &::before{
+        margin-top: -6px;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &.bottom{
+    .tipAngle{
+      bottom: 0;
+      &::before{
+        margin-bottom: -6px;
+        transform: rotate(180deg)
+      }
+    }
+  }
+  &.left, &.right{
+    .tipAngle{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &.left{
+    .tipAngle{
+      left: 0;
+      &::before{
+        margin-left: -9px;
+        transform: rotate(-90deg)
+      }
+    }
+  }
+  &.right{
+    .tipAngle{
+      right: 0;
+      &::before{
+        margin-right: -9px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.tipAngle{
+  position: absolute;
+  &::before {
+    content: "";
+    display: block;
+    border-width: 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #000
+  }
+}

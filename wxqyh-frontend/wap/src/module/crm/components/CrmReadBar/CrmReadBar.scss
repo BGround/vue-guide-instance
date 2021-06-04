@@ -1,0 +1,52 @@
+@import '../../crmBase.scss';
+
+.crm_read_bar_wrap{
+    min-height: 40px;  //添加最小高度修复微信电脑版触底加载问题
+    height: 40px;
+    padding-bottom:10px;
+    background:#f4f4f4;
+    .crm_read_bar{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        height:40px;
+        color: #666;
+        font-size: 13px;
+        line-height: 40px;
+        background:#fff;
+        &:after{
+            @include underLine;
+        }
+        .read_msg{
+            flex: 1;
+            .read_msg_span{
+                height:18px;
+                font-size:13px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(178,185,200,1);
+                line-height:18px;
+            }
+        }
+        .sign_read_wrap{
+            display: flex;
+            align-items: center;
+            text-align: right;
+            .sign_read{
+                height:18px;
+                font-size:13px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                line-height:18px;
+            }
+            .sign_read_null {
+                color:rgba(178,185,200,1);
+            }
+            .sign_read_dis {
+                color:rgba(69,135,248,1);
+            }
+        }
+        
+    }
+}

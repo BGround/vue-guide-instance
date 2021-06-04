@@ -1,0 +1,109 @@
+@import '../../../crmBase.scss';
+
+.contract_operate{
+    .operateItem_wrap{
+        .noType_tips{
+            position: absolute;
+            top: rem(30);
+            width: 95%;
+            font-size: rem(15);
+            color: red;
+            line-height: rem(18);
+        }
+        .qwui-title_detaildata{
+            &:nth-last-of-type(2){
+                .qwui-border_bottom{
+                    &:after{
+                        border: 0;
+                    }
+                }
+            }
+        }
+        .vux-cell-value{
+            font-size: rem(16);
+            color: #333;
+        }
+        .weui-cells{
+            &:after{
+                content: normal;
+            }
+        }
+        .vux-datetime{
+            line-height: rem(32);
+        }
+        .vux-no-group-title{
+            margin-top: rem(3);
+        }
+        .qwui-select{
+            padding-top: 0;
+        }
+        .custom_bar{
+            position: relative;
+            padding: rem(10) 0 rem(10) rem(15);
+            height: auto;
+            font-size: rem(13);
+            color: #bbb;
+            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+    }
+    .qwui-client_attachment{
+        position:relative;
+        background-color: #fff;
+        .img-text{
+            padding: rem(14) 0 0 rem(15);
+            display: inline-block;
+            font-size: rem(16);
+            font-family:PingFangSC-Regular;
+            color:rgba(51,51,51,1);
+        }
+    }
+    .qw-client_inform{
+        height: rem(44);
+        font-family:PingFangSC-Regular;
+        color:rgba(51,51,51,1);
+        font-size: rem(16);
+        position: relative;
+        background: #fff;
+        .qwui-user_cell_input{
+            float:right;
+        }
+        .qwui-inform_text{
+            padding: rem(10) rem(15);
+            margin-top: rem(10);
+        }
+    }
+    .qw-client_inform:after{
+        @include underLine;
+    }
+    .qwui-client_attachment::after{
+        @include underLine;
+    }
+    .qwui-separate_bar{
+        &:before,
+        &:after{
+        transform-origin: 0 0;
+        }
+    }
+    .footer_btn_wrap{
+        display: flex;
+        padding: rem(20) rem(15);
+    }
+    .contract_select_icon{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding-left: rem(40);
+        margin: auto;
+        width: rem(43);
+        height: rem(30);
+        font-size: rem(16);
+        color: #666;
+        line-height: rem(30);
+        border-left: 1px solid #dadada;
+        background: url('~assets/images/crm/pick_ico.png') no-repeat rem(15) center;
+        background-size: rem(18);
+        cursor: pointer;
+    }
+}

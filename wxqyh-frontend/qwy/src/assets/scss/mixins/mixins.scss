@@ -1,0 +1,34 @@
+@import "function";
+@import "../common/var";
+
+/*BEM*/
+@mixin b($block) {
+  $B: $namespace+'-'+$block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element){
+  $E:$element !global;
+  $selector:&;
+  $currentSelector:'';
+  @each $unit in $element{
+    $currentSelector: #{$currentSelector+'.'+$B+$qw-separator+$unit+','};
+  }
+  @at-root {
+    #{$currentSelector}{
+      @content;
+    }
+  }
+}
+
+@mixin when($state){
+  @at-root {
+    &.#{$state-prefix + $state}{
+      @content;
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+@import '@/assets/scss/baseUI.scss';
+
+@mixin link{
+    color: $color-text-base;
+    &:hover{
+        color: $color-primary
+    }
+}
+.c999{
+    color: $color-text-disabled;
+}
+.qwui-breadcrumb_back{
+    display: inline-block;
+    margin-right: 15px;
+}
+.qwui-breadcrumb_item{
+    .link_text{
+        @include link;
+        cursor: pointer;
+    }
+    .qwui-breadcrumb_item_inner{
+        a{
+            @include link;
+        }
+    }
+    &:last-child{
+        .qwui-breadcrumb_separator{
+            display: none;
+        }
+    }
+}

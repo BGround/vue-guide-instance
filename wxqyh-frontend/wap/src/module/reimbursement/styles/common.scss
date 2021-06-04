@@ -1,0 +1,67 @@
+@import '~./mixin.scss';
+
+.qwui-scroll_view {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* 覆盖高级搜索样式 */
+.qwui-advance_search_container /deep/ {
+  .SS_main .SS_form-group:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .SS_form-group select{
+    color: #333;
+    background: #fff;
+  }
+
+  .vux-datetime, .vux-datetime input {
+    background: #fff;
+  }
+}
+
+
+.arrow_down {
+  @include allow($rotate: 135deg, $width: 10px, $color: $color-placeholder);
+}
+
+.arrow_up {
+  @include allow($rotate: -45deg, $width: 10px, $color: $color-placeholder);
+}
+
+.arrow_right {
+  @include allow($rotate: 45deg, $width: 10px, $color: $color-placeholder);
+}
+
+.dollar {
+  &::before {
+    content: '￥ ';
+    font-size: $font-size-small;
+  }
+}
+
+.qwui-tip {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: right;
+  color: #B2B9C8;
+}
+
+.qwui-warn_tip {
+  color: #FF574D;
+}
+
+.qwui-total_rows {
+  font-size: $font-size-medium-s;
+  color: $icon-border-color;
+}
+
+.qwui-field_input {
+  flex: 1;
+  font-size: $font-size-medium-x;
+  line-height: 20px;
+  text-align: right;
+}

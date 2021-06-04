@@ -1,0 +1,101 @@
+$baseUrl: '../../../../../../assets/images/';
+@mixin background($url){
+  background: url($baseUrl + $url) no-repeat;
+  background-size: contain;
+}
+.qwui-dataReport {
+  padding:30px 15px 40px 18px;
+  background: #fff;
+  .qwui-dataReport-title{
+    max-height: 45px;
+    padding-bottom: 25px;
+    color: #0A1736;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .qwui-dataReport-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #B2B9C8;
+    font-size: 14px;
+    cursor: pointer;
+    i {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .active {
+      color: #5585F0;
+    }
+    .qwui-dataReport-nav-table i{
+      @include background('ic_b-form_off.png');
+    }
+    .qwui-dataReport-nav-table.active i{
+      @include background('ic_b-form_on.png');
+    }
+    .qwui-dataReport-nav-column i{
+      @include background('ic_b-Column_off.png');
+    }
+    .qwui-dataReport-nav-column.active i{
+      @include background('ic_b-Column_on.png');
+    }
+    .qwui-dataReport-nav-pie i{
+      @include background('ic_b-Pie_off.png');
+    }
+    .qwui-dataReport-nav-pie.active i{
+      @include background('ic_b-Pie_on.png');
+    }
+    .qwui-dataReport-nav-accord i{
+      @include background('ic_b-according_on.png');
+    }
+    .qwui-dataReport-nav-accord.active {
+      color: #B2B9C8;
+      i{
+        @include background('ic_b-according_off.png');
+      }
+    }
+  }
+
+  /*排序按钮*/
+  .qwui-dataReport-sortbtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    div {
+      margin: 0 5px;
+      padding: 4px 8px;
+      font-size: 13px;
+      color: #B2B9C8;
+      line-height: 18px;
+      border: 1px solid #B2B9C8;
+      border-radius: 2px;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        width: 6px;
+        height: 10px;
+        vertical-align: initial;
+        margin-left: 5px;
+        @include background('form-sort-default.png')
+      }
+    }
+    .active {
+      border-color: #5585F0;
+      color: #5585F0;
+      i {
+        @include background('form-sort-down.png')
+      }
+      i.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

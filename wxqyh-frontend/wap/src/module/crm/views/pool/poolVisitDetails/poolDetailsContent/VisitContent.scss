@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.qwui-details_content{
+  margin: 112px 0 70px;
+}
+.qwui-createInfo,
+.qwui-details_list,
+.qwui-details_itemList,
+.qwui-details_itemPic,
+.qwui-details_customList{
+  background: #fff;
+}
+.qwui-title_detaildata{
+  padding-left: 15px;
+}
+.qwui-createInfo{
+  margin-bottom:10px;
+  padding-left: 15px;
+}
+.qwui-details_list,
+.qwui-details_itemPic{
+  margin-top: 10px;
+}
+.qwui-details_itemList{
+  margin-top: 10px;
+  border-bottom:none;
+}
+.qwui-details_customList{
+  border-top:none;
+}
+.qwui-details_list div:last-child .qwui-border_bottom:after,
+.qwui-details_customList  div:last-child .qwui-border_bottom:after{
+  border-bottom: none;
+}
+.qwui-details_list pre{
+  margin: 0;
+}
+.qwui-createInfo{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.qwui-createInfo p{
+  display: inline-block;
+  margin-right: 15px;
+}
+.qwui-creator{
+  color: #333;
+  font-size: 16px;
+}
+.qwui-createInfo_time{
+  color: #999;
+  font-size: 13px;
+}
+.addr_active{
+  max-width: 300px;
+}
+.qwui-title_common_text .qwui-address_icon{
+  margin-top: 0;
+}
+
+
+/*图片附件样式*/
+.qwui-details_itemPic{
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+  background: #fff;
+}
+.qwui-details_itemPicTitle{
+  padding-left:15px;
+  margin-top: 0;
+}
+.qwui-details_itemPic .qwui-detail_header .qwui-detail_header_title,
+.qwui-details_itemPic .qwui-detail_header .qwui-detail_header_time,
+.qwui-details_itemPic .qwui-detail_header .qwui-detail_header_content {
+  padding: 0;
+  height: 0;
+}
+.qwui-details_itemPic .qwui-detail_header .qwui-detail_instruct{
+  padding: 10px 0;
+}
+.qwui-detail_instruct .qwui-detail_instruct_images{
+  overflow: hidden;
+}
+.qwui-detail_header .qwui-detail_instruct .qwui-detail_instruct_images img{
+  float: left;
+  margin-right: 4%;
+  margin-bottom: 10px;
+  width: 30%;
+  height: 116px;
+  font-size: 0;
+  overflow: hidden;
+}
+.qwui-details_itemPic .qwui-detail_header .qwui-detail_instruct .qwui-detail_instruct_images img:nth-child(3n+3){
+  margin-right: 0;
+}
+
+/*清除负责人，相关人,评论横线*/
+.qwui-user_select_box .qwui-user_select_title:after,
+.qwui-user_select_box .qwui-user_select_charge:after{
+  border-bottom: none;
+}
+

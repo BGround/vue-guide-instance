@@ -1,0 +1,11 @@
+@import '../../../../../crmBase.scss';
+
+.crm_list{
+    position: relative;    
+    &:after{
+        @include underLine;
+    }
+    &:before{
+        @include topLine;
+    }
+}

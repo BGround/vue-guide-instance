@@ -1,0 +1,18 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="160px" height="133px">
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M1.990,0.980 L157.990,0.980 C159.095,0.980 159.990,1.875 159.990,2.980 L159.990,132.980 L-0.010,132.980 L-0.010,2.980 C-0.010,1.875 0.885,0.980 1.990,0.980 Z"/>
+<text font-family="Microsoft YaHei" fill="rgb(153, 153, 153)" font-size="5px" x="18px" y="46.3119999999999px">&#26631;&#39064;&#21517;&#31216;&#32;&#42;</text>
+<text font-family="Microsoft YaHei" fill="rgb(51, 51, 51)" font-size="6px" x="18px" y="56.1869999999999px">&#35831;&#36755;&#20837;</text>
+<text font-family="Microsoft YaHei" fill="rgb(153, 153, 153)" font-size="5px" x="18px" y="74.328px">&#21517;&#31216;&#32;&#42;</text>
+<path fill-rule="evenodd"  opacity="0" fill="rgb(240, 240, 240)"
+ d="M19.000,93.000 L19.000,92.000 L136.000,92.000 L136.000,93.000 L19.000,93.000 Z"/>
+<text font-family="Microsoft YaHei" fill="rgb(51, 51, 51)" font-size="6px" x="18px" y="84.1410000000001px">&#35831;&#36755;&#20837;&#39033;&#30446;&#21517;&#31216;</text>
+<text font-family="Microsoft YaHei" fill="rgb(153, 153, 153)" font-size="5px" x="18px" y="104.375px">&#36873;&#25321;&#32;&#42;</text>
+<path fill-rule="evenodd"  opacity="0" fill="rgb(240, 240, 240)"
+ d="M19.000,123.000 L19.000,122.000 L136.000,122.000 L136.000,123.000 L19.000,123.000 Z"/>
+<text font-family="Microsoft YaHei" fill="rgb(51, 51, 51)" font-size="6px" x="18px" y="114.266px">&#35831;&#36873;&#25321;</text>
+<text font-family="Microsoft YaHei" font-size="12px" x="16px" y="27px">&#26410;&#21629;&#21517;&#34920;&#21333;</text>
+</svg>

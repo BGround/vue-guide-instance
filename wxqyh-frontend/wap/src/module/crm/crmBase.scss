@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// 根节点字体大小
+$baseNum: 12;
+// px转换rem
+@function rem($num){
+	@return ($num/$baseNum)*1rem;
+}
+
+@media screen and (min-width: 1024px){
+  .new-btn,.qwui-pool_mask {
+    width: 740px!important;
+  }
+}
+
+@import './style/minix.scss';
