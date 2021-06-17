@@ -1,5 +1,5 @@
 # vuex-vue
-
+[慕课网vuex基础入门](https://www.imooc.com/learn/1157)
 ## Project setup
 ```
 npm install

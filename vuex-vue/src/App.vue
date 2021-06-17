@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-	<h1>count:{{this.$store.state.count}}</h1>
-	<button @click="increaseCount">点我自增</button>
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
+	  <h1>count:{{this.$store.state.count}}</h1>
+    <button @click="increaseCount">点我自增</button> -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -10,23 +11,22 @@
 
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   methods: {
-	increaseCount(){
-		this.$store.commit('countIncrease') 
-	}
+    // increaseCount(){
+    //   this.$store.commit('countIncrease') 
+    // }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 }
 </style>
