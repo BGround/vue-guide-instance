@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import A from '@/components/A'
 import A1 from '@/components/A1'
 import B from '@/components/B'
+import Life from '@/components/LifeCycle/Life.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
     {
       path: '/b',
       component: B
+    },
+    {
+      path: '/life',
+      // component: '../components/LifeCycle/Life.vue'
+      component: Life
     }
   ]
 })

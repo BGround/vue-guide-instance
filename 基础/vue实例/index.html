@@ -11,7 +11,14 @@
 		</div>
 
 		<script type="text/javascript">
-			var data = {a: 1}
+			var data = {
+				a: 1,
+				arr: [1,2,3],
+				person: {
+					age: 18,
+					name: 'Alice'
+				}
+			}
 			var vm = new Vue({
 				el: '#App',
 				data: data
@@ -26,7 +33,15 @@
 			console.log(document.getElementById('App'))
 			console.log(vm.$el === document.getElementById('App'))
 			
+			//当修改a的值时，会触发这个响应式方法
 			vm.$watch('a',function(newValue, oldValue) {
+				console.log(newValue, oldValue)
+			})
+			
+			Vue.set(vm.person, 'age', 30);
+			// this.$set(vm.person, 'age', 30);
+			//当修改a的值时，会触发这个响应式方法
+			vm.$watch('arr',function(newValue, oldValue) {
 				console.log(newValue, oldValue)
 			})
 			
