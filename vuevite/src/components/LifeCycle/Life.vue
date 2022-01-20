@@ -9,6 +9,9 @@ export default {
             a: {}
         }
     },
+    render() {
+        return console.log(this.app.$options.render)
+    },
     created() {
          this.a.b = 1
     },
