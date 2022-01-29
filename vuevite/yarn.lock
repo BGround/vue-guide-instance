@@ -81,6 +81,11 @@
     "@vue/compiler-dom" "3.2.9"
     "@vue/shared" "3.2.9"
 
+"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.18":
+  version "6.0.0-beta.21.1"
+  resolved "https://nexus.mychery.com/repository/npm-public/@vue/devtools-api/-/devtools-api-6.0.0-beta.21.1.tgz#f1410f53c42aa67fa3b01ca7bdba891f69d7bc97"
+  integrity sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==
+
 "@vue/reactivity@3.2.9":
   version "3.2.9"
   resolved "https://nexus.mychery.com/repository/npm-public/@vue/reactivity/-/reactivity-3.2.9.tgz#f4ec61519f4779224d98a23ac07b481d95687cae"
@@ -392,6 +397,13 @@ vite@^2.5.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-router@^4.0.12:
+  version "4.0.12"
+  resolved "https://nexus.mychery.com/repository/npm-public/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
+  integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.18"
+
 vue@^3.2.6:
   version "3.2.9"
   resolved "https://nexus.mychery.com/repository/npm-public/vue/-/vue-3.2.9.tgz#f8373c0d78136e331ad079e18ed72deaa95be5f2"
@@ -400,6 +412,13 @@ vue@^3.2.6:
     "@vue/compiler-dom" "3.2.9"
     "@vue/runtime-dom" "3.2.9"
     "@vue/shared" "3.2.9"
+
+vuex@^4.0.2:
+  version "4.0.2"
+  resolved "https://nexus.mychery.com/repository/npm-public/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
+  integrity sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.11"
 
 yallist@^3.0.2:
   version "3.1.1"
