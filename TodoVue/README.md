@@ -1,6 +1,4 @@
-
-
-Vue核心知识点
+### Vue核心知识点
 
 一、vue是一个组件化框架
 
@@ -13,3 +11,11 @@ Vue核心知识点
 （1）生命周期方法（跟react学习的）
 
 （2）computed，是一个reactive框架（声明好的数据，一旦改变，就会影响依赖这些数据的地方，如template依赖于data里的数据，data改变时，template改变）。
+
+
+
+### 运行
+1. yarn install
+2. yarn dev  // 开发者模式
+
+
