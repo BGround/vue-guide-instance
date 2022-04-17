@@ -6,6 +6,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
+## 根据大圣Vue3专栏学习记录
+
 ## 新建vite vue3项目
 1. npm init @vitejs/app 或者 npm init @vite/latest
 2. 安装插件 npm install vue-router@next vuex@next
@@ -20,3 +22,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 │   ├── router         路由配置
 │   ├── store          vuex数据
 │   └── utils          工具函数
+
+
+
+
