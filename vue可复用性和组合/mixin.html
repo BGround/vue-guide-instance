@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 组件的三个概念 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			
+	</head>
+	<body>
+		<div id="App">
+			<ul>
+				<todo-item v-for="item in list" :item="item" @delete="handleDelete"></todo-item>
+				
+				<span slot="prefixIcon" slot-scope="props" :style="{color: props.checked?red:blue}">我是前缀Icon</span>
+				<span slot="suffixIcon">我是后缀Icon</span>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			Vue.component('todo-item',{
+				props:['item'],
+				data() {
+					return {
+						checked: false //默认不选中
+					}
+				},
+				template: `<li><input type="checkbox" v-model="checked"/>
+					<slot name="prefixIcon" v-bind={'checked'}></slot>
+					<span>{{item}}</span>
+					<slot name="suffixIcon"></slot>
+					<button @click="handleclick">删除</button></li>`,
+				methods: {
+					handleclick() {
+						this.$emit('delete',this.item)
+					}
+				}
+			})
+			
+			var mixin = {
+				methods: {
+					foo: function() {
+						console.log("foo from mixin")
+					},
+					handleDelete(item) {
+						console.log("handle from mixin")
+					}
+				}
+			}
+			
+			var vm = new Vue({
+				el: '#App',
+				mixins: [mixin],
+				data() {
+					return {
+						list: ["学习Vue属性", "学习Vue事件", "学习Vue插槽"]
+					}
+				},
+				methods:{
+					handleDelete(item){
+						const index = this.list.findIndex(text => text===item)
+						this.list.splice(index,1)
+						console.log("handle from self")
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
